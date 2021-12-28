@@ -1,2 +1,2 @@
 # leetcode
-Notes of learning solving leetcode problems.
+Notes of learning solving leetcode problems
