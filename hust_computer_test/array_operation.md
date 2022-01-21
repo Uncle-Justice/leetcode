@@ -12,3 +12,12 @@
 2. 元素互换位置
 
     vector的元素互换位置```swap(arr[i], arr[j])```
+
+3. 数组排序
+
+    需要使用```#include <algorithm>```
+
+    升序```sort(freq.begin(), freq.end());```
+    
+    降序```sort(freq.begin(), freq.end());
+        reverse(freq.begin(), freq.end());```
