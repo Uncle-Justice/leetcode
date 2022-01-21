@@ -41,6 +41,11 @@
 
    ```tolower(str[i]), toupper(str[i])```
 
+7. 字符串内单个字符的赋值
+
+   貌似就是可以直接用=的，详见leetcode0345题
+   交换甚至也可以用swap函数，可能是C++新标准
+
 ### 二、其他知识
 
 1. [ASCII码](https://tool.oschina.net/commons?type=4)
