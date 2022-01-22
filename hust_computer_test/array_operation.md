@@ -21,3 +21,8 @@
     
     降序```sort(freq.begin(), freq.end());
         reverse(freq.begin(), freq.end());```
+
+4. 插入
+
+    ```a.push_back(i)```注意这个下划线
+    ```a.append(i)```
