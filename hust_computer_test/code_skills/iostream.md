@@ -74,4 +74,16 @@ https://blog.csdn.net/liyunyou/article/details/82875384
 
 看不懂了已经
 
-## 三、C++格式化输出
+## 零、其他
+
+1. ctrl+z
+
+华科2021年涉及到如下描述：
+
+> 直到输入ctrl+z结束
+
+这里的ctrl+z实际上就是```EOF```，在命令行模式下，while(cin>>n)可以让用户一直输入，直到你打一个ctrl+z。
+
+ctrl+c的作用与之不同，这个是直接终止程序。
+
+网上还说ctrl+z一般用于字符串的EOF，ctrl+d一般用于数字的EOF，不过我想一般的题目就可以全部当做是ctrl+z来做。

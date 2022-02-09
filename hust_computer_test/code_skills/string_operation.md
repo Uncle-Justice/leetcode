@@ -47,6 +47,37 @@
    貌似就是可以直接用=的，详见leetcode0345题
    交换甚至也可以用swap函数，可能是C++新标准
 
+8. 字符串内部查找
+
+find可以用于查找字符也可以用于查找字符串
+
+```cpp
+string str("ABCDEFGABCD");                      //11个字符
+int n;
+/*查找成功返回位置,查找失败,则n等于-1*/
+/*find():从头查找某个字符串*/
+n= str.find('A');              //查找"A",n=0;
+n= str.find("AB");             //查找"AB",n=0;
+n= str.find("BC",1);           //从位置1处,查找"BC",n=1;
+n= str.find("CDEfg",1,3);      //从位置1处,查找"CDEfg"的前3个字符,等价于str.find("CDE",1),n=2;
+
+ 
+/* find_first_of ():查找str里是否包含有子串中任何一个字符*/
+n= str.find_first_of("abcDefg");     //由于str位置3是'D',等于"abcDefg"的'D',所以n=3
+n= str.find_first_of("abcDefg",1,4); //等价于str. find_first_of ("abcD",1); 所以n=3
+ 
+ 
+/* find_last_of ():末尾查找, 从末尾处开始,向前查找是否包含有子串中任何一个字符*/
+n= str.find_last_of("abcDefg");      //由于str末尾位置10是'D',所以n=10
+n= str.find_last_of("abcDefg",5,4);  //等价于str. find_last_of ("abcD",5); 所以n=3
+
+
+/*rfind():反向(reverse)查找,从末尾处开始,向前查找*/
+n= str.rfind("CD");           //从位置10开始向前查找,n=9
+n= str.rfind("CD",5);         //从位置5开始向前查找,n=2
+n= str.rfind("CDEfg",5,3);    //等价于str.rfind("CDE",5);       ,所以n=2
+```
+
 ### 二、其他知识
 
 1. [ASCII码](https://tool.oschina.net/commons?type=4)
