@@ -27,6 +27,10 @@
     ```a.push_back(i)```注意这个下划线
     ```a.append(i)```
 
+5. 删除
+
+    ```a.pop_back()```弹出最后一个元素
+
 ## 二、unordered_map、unordered_set的区别
 
 - 哈希map是键值对，插入的时候需要同时给出key和value

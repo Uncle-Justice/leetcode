@@ -38,7 +38,7 @@
 
 6. 和字符有关的一些常用判断函数
 
-   ```isalpha(), isalnum(), islower(), isupper()```
+   ```isalpha(), isalnum()十进制数字或字母, isdigit()十进制数字,islower(), isupper()```
 
    ```tolower(str[i]), toupper(str[i])```
 
