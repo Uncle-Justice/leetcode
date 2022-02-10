@@ -78,6 +78,21 @@ n= str.rfind("CD",5);         //从位置5开始向前查找,n=2
 n= str.rfind("CDEfg",5,3);    //等价于str.rfind("CDE",5);       ,所以n=2
 ```
 
+9. 子串
+
+注意substr的参数可以有好几种形式
+
+```cpp
+string s="sfsa";
+string a=s.substr(0,3);// sfs
+string b=s.substr(); // sfsa
+string c=s.substr(2,3); // sa
+
+// 如果没有指定该参数，则子串将延续到母串的最后
+string c=s.substr(2); // sa
+```
+
+
 ### 二、其他知识
 
 1. [ASCII码](https://tool.oschina.net/commons?type=4)
