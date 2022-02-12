@@ -84,3 +84,44 @@ from user_profile
 where gender = 'male';
 ```
 
+### SQL26，27
+
+https://www.nowcoder.com/practice/30f9f470390a4a8a8dd3b8e1f8c7a9fa?tpId=199&tqId=1975677&ru=%2Fexam%2Foj&qru=%2Fta%2Fsql-quick-study%2Fquestion-ranking&sourceUrl=%2Fexam%2Foj%3Ftab%3DSQL%25E7%25AF%2587%26topicId%3D199
+
+select中使用case/if语句
+
+```SQL
+SELECT if(age>=25,'25岁及以上','25岁以下') as age_cut,count(device_id) as number
+from user_profile
+group by age_cut;
+```
+
+```SQL
+select device_id,gender,
+case
+    when age<20 then '20岁以下'
+    when age<25 then '20-24岁'
+    when age>=25 then '25岁及以上'
+    else '其他'
+end age_cut
+from user_profile;
+```
+
+### SQL 34
+
+https://www.nowcoder.com/practice/53235096538a456b9220fce120c062b3?tpId=199&tqId=1980673&ru=/practice/26c8715f32e24d918f15db69518f3ad8&qru=/ta/sql-quick-study/question-ranking
+
+有点复杂
+
+```SQL
+select
+t1.device_id,
+t1.university,
+sum(case when t2.result is not null then 1 else 0 end),
+sum(case when t2.result = 'right' then 1 else 0 end)
+FROM user_profile t1
+LEFT JOIN question_practice_detail t2
+ON t1.device_id = t2.device_id and MONTH(t2.date) = '08'
+where t1.university = '复旦大学'
+group by t1.device_id
+```
