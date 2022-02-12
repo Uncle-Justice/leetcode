@@ -52,3 +52,35 @@ where a.device_id = b.device_id
 group by university
 order by count(question_id) / count(a.device_id);
 ```
+
+### SQL23
+
+https://www.nowcoder.com/practice/5400df085a034f88b2e17941ab338ee8?tpId=199&tqId=1975675&ru=/practice/979b1a5a16d44afaba5191b22152f64a&qru=/ta/sql-quick-study/question-ranking
+
+要学会 join...on...的写法
+
+
+```SQL
+SELECT university,difficult_level,count(qp.question_id) /count(distinct qp.device_id) avg_answer_cnt
+FROM question_practice_detail qp 
+    left join user_profile u on qp.device_id=u.device_id
+    left join question_detail qd on qp.question_id=qd.question_id  
+group by university,difficult_level
+```
+
+### SQL25 
+
+https://www.nowcoder.com/practice/979b1a5a16d44afaba5191b22152f64a?tpId=199&tqId=1975677&ru=/practice/5400df085a034f88b2e17941ab338ee8&qru=/ta/sql-quick-study/question-ranking
+
+UNION会去重，UNION ALL不去重
+
+```SQL
+select device_id, gender, age, gpa
+from user_profile
+where university = '山东大学'
+UNION ALL
+select device_id, gender, age, gpa
+from user_profile
+where gender = 'male';
+```
+
