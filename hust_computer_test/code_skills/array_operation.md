@@ -24,8 +24,11 @@
 
 4. 插入
 
-    ```a.push_back(i)```注意这个下划线
-    ```a.append(i)```
+
+    尾插：```a.push_back(i)```注意这个下划线
+    尾插：```a.append(i)```
+    **首插**：```a.insert(a.begin(), i)```
+
 
 5. 删除
 
