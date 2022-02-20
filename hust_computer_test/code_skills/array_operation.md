@@ -28,11 +28,14 @@
     尾插：```a.push_back(i)```注意这个下划线
     尾插：```a.append(i)```
     **首插**：```a.insert(a.begin(), i)```
+    任意位置插入：```a.insert(a.begin()+offset, i)```
 
 
 5. 删除
 
     ```a.pop_back()```弹出最后一个元素
+    删除第一个：```auto it = a.begin(); a.erase(it);```
+    删除任意位置：```a.erase(a.begin()+offset, i)```
 
 ## 二、unordered_map、unordered_set的区别
 
