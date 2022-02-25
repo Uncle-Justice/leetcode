@@ -76,6 +76,10 @@ https://blog.csdn.net/liyunyou/article/details/82875384
 
 看不懂了已经
 
+## 三、cin
+
+cin一个string的时候，是遇到空格就截止，因此这里不会换行，要是想换行要用getline，详情见PAT_Basic1028
+
 ## 零、其他
 
 1. ctrl+z
