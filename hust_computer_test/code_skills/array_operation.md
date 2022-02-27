@@ -37,6 +37,45 @@
     删除第一个：```auto it = a.begin(); a.erase(it);```
     删除任意位置：```a.erase(a.begin()+offset, i)```
 
+6. 去重
+   
+   两种方法
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <set>
+#include <algorithm>
+using namespace std;
+
+// 去重方法一，使用set
+void RemoveRepeat1(vector<int>& vec)
+{
+    set<int> setVec(vec.begin(), vec.end());
+    vec.assign(setVec.begin(), setVec.end());
+}
+// 方法二，使用sort + unique函数
+// 先排序，然后去重
+void RemoveRepeat2(vector<int> &vec)
+{
+    sort(vec.begin(),vec.end());
+    // unique让所有重复的数都放到最后，返回一个迭代器
+    
+    // 1 2 3 4 3 就是返回3的迭代器
+    auto it = unique(vec.begin(), vec.end());
+
+    vec.erase(it, vec.end());
+}
+int main()
+{
+    vector<int> vec = {1,2,2,1,4,2,4,7,43};
+    RemoveRepeat2(vec);
+
+    for(auto it : vec)
+        cout << it << " ";
+    return 0;
+}
+```
 ## 二、unordered_map、unordered_set的区别
 
 - 哈希map是键值对，插入的时候需要同时给出key和value
