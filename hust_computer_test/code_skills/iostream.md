@@ -70,6 +70,10 @@ printf("%d\n",num);// 注意输入num要用&号，而输出不用
 printf("%04d-%02d-%02d\n",year,month,day);
 ```
 
+还有一些小数的很具体的格式化，遇到再记录
+
+https://blog.csdn.net/qq_36859842/article/details/76696394
+
 3. 更复杂的说明
 
 https://blog.csdn.net/liyunyou/article/details/82875384
@@ -78,7 +82,9 @@ https://blog.csdn.net/liyunyou/article/details/82875384
 
 ## 三、cin
 
-比如我要输入多行数据，如果我每一行都只用一个cin>>，那么没问题，因为cin>>会跳过**开头的**回车符，
+1. 回车符问题
+   
+  比如我要输入多行数据，如果我每一行都只用一个cin>>，那么没问题，因为cin>>会跳过**开头的**回车符，
 
 但是有些时候，题目会给第一行一个int，后面的行全部string，这个时候我比较想用一个cin>>接收第一行，后面的行用getline直接变成字符串，但是问题就来了，**cin>>不会到了结尾的回车符只是停止了，但是getline并不会自动跳过开头遇到的回车符**
 
@@ -90,7 +96,13 @@ https://blog.csdn.net/liyunyou/article/details/82875384
 
 PAT_Basic1028
 
+2. 读多行
 
+scanf在while中需要做EOF的判断，但是getline的话，就直接
+```cpp
+while(getline(cin, input)){}
+```
+即可
 
 ## 零、其他
 
