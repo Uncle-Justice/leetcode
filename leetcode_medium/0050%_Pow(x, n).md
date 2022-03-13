@@ -12,7 +12,7 @@ https://leetcode-cn.com/problems/powx-n/
 
 1. 常规解法
 
-但是因特殊情况超时而失败，比如n非常大
+但是因特殊情况超时而失败，比如n非常大，而且不仅n可能是负数，还要考虑x是复数的情况。。。复试应该不至于这么难
 
 ```cpp
 class Solution {
