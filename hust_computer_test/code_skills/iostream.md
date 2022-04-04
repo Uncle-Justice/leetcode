@@ -3,7 +3,7 @@
 
 
 ---
-### 在C++中使用scanf/printf，要加上```#include<stdio.h>```
+### 在C++中使用scanf/printf，要加上```#include<iomanip>```
 ---
 
 ## 一、scanf
